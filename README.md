@@ -4,7 +4,7 @@ Use Ix to do multiple things without having to spin up a separate runtime for ea
 
 ## Usage
 Get a copy of `ix.dex`.
-Run `app_process w.ix.Ix` with `ix.dex` in the classpath.
+Run `app_process some-dir w.ix.Ix` with `ix.dex` in the classpath.
 Probably also with `/system/framework/input.jar` in the classpath too to be safe, although it appears to be empty on my phone.
 Send lines to stdin of tab-separated arguments.
 

@@ -16,6 +16,11 @@ sailfish:/ $ time for i in $(seq 100 10 980); do echo "tap	$i	700"; done | app_p
     0m00.65s real     0m00.29s user     0m00.15s system
 ```
 
+## Extra features
+Ix intercepts these additional commands:
+* `sleep	MILLIS`: wait
+* `echo`: send a newline to stdout
+
 ## Developing on Glitch
 Use this to set up our code style in Glitch's online editor:
 ```js

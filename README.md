@@ -6,19 +6,19 @@ Use Ix to do multiple things without having to spin up a separate runtime for ea
 Get a copy of `ix.dex`.
 Run `app_process some-dir w.ix.Ix` with `ix.dex` in the classpath.
 Probably also with `/system/framework/input.jar` in the classpath too to be safe, although it appears to be empty on my phone.
-Send lines to stdin of tab-separated arguments.
+Send lines to stdin of space-separated arguments, which Ix will forward to `input`.
 
 ## Comparison
 ```
 sailfish:/ $ time for i in $(seq 100 10 980); do input tap $i 600; done
     0m35.06s real     0m00.23s user     0m00.26s system
-sailfish:/ $ time for i in $(seq 100 10 980); do echo "tap	$i	700"; done | app_process -cp /system/framework/input.jar:/sdcard/Download/ix.dex /system/bin w.ix.Ix
+sailfish:/ $ time for i in $(seq 100 10 980); do echo "tap $i 700"; done | app_process -cp /system/framework/input.jar:/sdcard/Download/ix.dex /system/bin w.ix.Ix
     0m00.65s real     0m00.29s user     0m00.15s system
 ```
 
 ## Extra features
 Ix intercepts these additional commands:
-* `sleep	MILLIS`: wait
+* `sleep MILLIS`: wait
 * `echo`: send a newline to stdout
 
 ## Developing on Glitch

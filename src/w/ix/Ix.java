@@ -12,7 +12,7 @@ public class Ix {
 		while (true) {
 			final String line = in.readLine();
 			if (line == null) break;
-			final String[] cmd = line.split("\t");
+			final String[] cmd = line.split(" ");
 			switch (cmd[0]) {
 				case "sleep":
 					Thread.sleep(Long.parseLong(cmd[1]));
